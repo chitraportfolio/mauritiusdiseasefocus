@@ -1,0 +1,16 @@
+<vector android:height="100dp" android:viewportHeight="1000"
+    android:viewportWidth="1000" android:width="100dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#e4e8ec" android:pathData="M241.65,836.8a258.35,45.2 0,1 0,516.69 0a258.35,45.2 0,1 0,-516.69 0z"/>
+    <path android:fillColor="#fff" android:pathData="M550,616.89V185a50,50 0,0 0,-50 -50h0a50,50 0,0 0,-50 50V616.89a120,120 0,1 0,100 0Z"/>
+    <path android:fillColor="#171819" android:pathData="M500,849a123.01,123.01 0,0 1,-53 -234.02L447,185a53,53 0,0 1,106 0L553,614.98A123.01,123.01 0,0 1,500 849ZM500,138a47.05,47.05 0,0 0,-47 47L453,616.89a3,3 0,0 1,-1.75 2.73,117 117,0 1,0 97.5,0A3,3 0,0 1,547 616.89L547,185A47.05,47.05 0,0 0,500 138Z"/>
+    <path android:fillColor="#ff4f7c" android:pathData="M500,826a100.02,100.02 0,0 1,-41.66 -190.94L470,629.71V340.83a30,30 0,0 1,60 0V629.71l11.66,5.35A100.02,100.02 0,0 1,500 826Z"/>
+    <path android:fillColor="#171819" android:pathData="M611,275.94H583.88a6,6 0,0 1,0 -12H611a6,6 0,0 1,0 12Z"/>
+    <path android:fillColor="#171819" android:pathData="M611,338.88H583.88a6,6 0,0 1,0 -12H611a6,6 0,0 1,0 12Z"/>
+    <path android:fillColor="#171819" android:pathData="M638,401.82H583.88a6,6 0,0 1,0 -12H638a6,6 0,0 1,0 12Z"/>
+    <path android:fillColor="#171819" android:pathData="M611,464.76H583.88a6,6 0,0 1,0 -12H611a6,6 0,0 1,0 12Z"/>
+    <path android:fillColor="#171819" android:pathData="M611,527.7H583.88a6,6 0,0 1,0 -12H611a6,6 0,0 1,0 12Z"/>
+    <path android:fillColor="#171819" android:pathData="M638,590.64H583.88a6,6 0,0 1,0 -12H638a6,6 0,0 1,0 12Z"/>
+    <path android:fillColor="#171819" android:pathData="M638,213H583.88a6,6 0,0 1,0 -12H638a6,6 0,0 1,0 12Z"/>
+    <path android:fillColor="#ffb800" android:pathData="M449,341.73l-25.91,-17.36v-8.4a37.24,37.24 0,0 0,-37.24 -37.24H280.33a37.24,37.24 0,0 0,-37.24 37.24v51.51a37.24,37.24 0,0 0,37.24 37.24H385.85a37.24,37.24 0,0 0,37.24 -37.24v-8.4Z"/>
+    <path android:fillColor="#171819" android:pathData="M385.85,407.73L280.33,407.73a40.29,40.29 0,0 1,-40.24 -40.24L240.09,315.97a40.29,40.29 0,0 1,40.24 -40.24L385.85,275.73a40.29,40.29 0,0 1,40.24 40.24v6.8l24.58,16.47a3,3 0,0 1,0 4.98l-24.58,16.47v6.8A40.29,40.29 0,0 1,385.85 407.73ZM280.33,281.73a34.28,34.28 0,0 0,-34.24 34.24v51.51a34.28,34.28 0,0 0,34.24 34.24L385.85,401.73a34.28,34.28 0,0 0,34.24 -34.24v-8.4a3,3 0,0 1,1.33 -2.49l22.19,-14.87 -22.19,-14.87a3,3 0,0 1,-1.33 -2.49v-8.4a34.28,34.28 0,0 0,-34.24 -34.24Z"/>
+</vector>

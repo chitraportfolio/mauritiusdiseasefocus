@@ -143,7 +143,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/edtTextRegisterPasswordConfirmation"
                 android:layout_marginLeft="150dp"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="20dp"
                 android:text="Sign me up!"
                 android:backgroundTint="#4267B2"/>
 
