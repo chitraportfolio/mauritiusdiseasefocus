@@ -8,132 +8,150 @@
    >
 
 
-    <TextView
-        android:id="@+id/txtSecondTitleRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/MauritiusDiseaseFocusLogo"
-        android:layout_marginLeft="40dp"
-        android:layout_marginTop="20dp"
-        android:text="Sign Up"
-        android:textSize="25dp"
-        android:textStyle="bold" />
+    <ScrollView
+        android:id="@+id/Register_Scroll_View"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/edtTxtFirstName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtSecondTitleRegister"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:drawableLeft="@drawable/ic_baseline_person_24"
-        android:drawablePadding="5dp"
-        android:ems="15"
-        android:hint="First Name"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:padding="10dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/edtTxtLastName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edtTxtFirstName"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:drawableLeft="@drawable/ic_baseline_person_24"
-        android:drawablePadding="5dp"
-        android:ems="15"
-        android:hint="last Name"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:padding="10dp" />
+            <ImageView
+                android:id="@+id/MauritiusDiseaseFocusLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                app:srcCompat="@drawable/im_logo_3_1" />
 
-    <ImageView
-        android:id="@+id/MauritiusDiseaseFocusLogo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="120dp"
-        app:srcCompat="@drawable/im_logo_3_1" />
+            <TextView
+                android:id="@+id/txtSecondTitleRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/MauritiusDiseaseFocusLogo"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:text="Sign Up"
+                android:textSize="25dp"
+                android:textStyle="bold" />
 
-    <EditText
-        android:id="@+id/edtTextEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edtTxtLastName"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="30dp"
-        android:drawableLeft="@drawable/ic_baseline_alternate_email_24"
-        android:drawablePadding="10dp"
-        android:ems="15"
-        android:hint="Email"
-        android:inputType="textEmailAddress"
-        android:minHeight="48dp" />
+            <EditText
+                android:id="@+id/edtTxtFirstName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtSecondTitleRegister"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:drawablePadding="5dp"
+                android:ems="15"
+                android:hint="First Name"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:padding="10dp" />
 
-    <EditText
-        android:id="@+id/edtTextPhoneNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edtTextEmail"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:drawableLeft="@drawable/ic_baseline_phone_iphone_24"
-        android:drawablePadding="5dp"
-        android:ems="15"
-        android:hint="Mobile Number"
-        android:inputType="number|text|phone"
-        android:minHeight="48dp" />
+            <EditText
+                android:id="@+id/edtTxtLastName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtTxtFirstName"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:drawablePadding="5dp"
+                android:ems="15"
+                android:hint="last Name"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:padding="10dp" />
 
-    <EditText
-        android:id="@+id/edtTextUsername"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edtTextPhoneNumber"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:drawableLeft="@drawable/ic_baseline_person_24"
-        android:drawablePadding="5dp"
-        android:ems="15"
-        android:hint="Create a user name"
-        android:inputType="textPersonName"
-        android:minHeight="48dp" />
 
-    <EditText
-        android:id="@+id/edtTextRegisterPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edtTextUsername"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:drawableLeft="@drawable/ic_baseline_security_24"
-        android:drawablePadding="5dp"
-        android:ems="15"
-        android:hint="Create a password"
-        android:inputType="numberPassword"
-        android:minHeight="48dp" />
+            <EditText
+                android:id="@+id/edtTextEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtTxtLastName"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:drawableLeft="@drawable/ic_baseline_alternate_email_24"
+                android:drawablePadding="10dp"
+                android:ems="15"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:minHeight="48dp" />
 
-    <EditText
-        android:id="@+id/edtTextRegisterPasswordConfirmation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edtTextRegisterPassword"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
-        android:drawableLeft="@drawable/ic_baseline_security_24"
-        android:drawablePadding="5dp"
-        android:ems="15"
-        android:hint="Confirm password"
-        android:inputType="numberPassword"
-        android:minHeight="48dp" />
+            <EditText
+                android:id="@+id/edtTextPhoneNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtTextEmail"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/ic_baseline_phone_iphone_24"
+                android:drawablePadding="5dp"
+                android:ems="15"
+                android:hint="Mobile Number"
+                android:inputType="number|text|phone"
+                android:minHeight="48dp" />
 
-    <Button
-        android:id="@+id/btnSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edtTextRegisterPasswordConfirmation"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="20dp"
-        android:text="Sign me up!"
-        android:backgroundTint="#4267B2"/>
+            <EditText
+                android:id="@+id/edtTextUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtTextPhoneNumber"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/ic_baseline_person_24"
+                android:drawablePadding="5dp"
+                android:ems="15"
+                android:hint="Create a user name"
+                android:inputType="textPersonName"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/edtTextRegisterPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtTextUsername"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/ic_baseline_security_24"
+                android:drawablePadding="5dp"
+                android:ems="15"
+                android:hint="Create a password"
+                android:inputType="numberPassword"
+                android:minHeight="48dp" />
+
+            <EditText
+                android:id="@+id/edtTextRegisterPasswordConfirmation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtTextRegisterPassword"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/ic_baseline_security_24"
+                android:drawablePadding="5dp"
+                android:ems="15"
+                android:hint="Confirm password"
+                android:inputType="numberPassword"
+                android:minHeight="48dp" />
+
+            <Button
+                android:id="@+id/btnSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtTextRegisterPasswordConfirmation"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="20dp"
+                android:text="Sign me up!"
+                android:backgroundTint="#4267B2"/>
+
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
 
 </RelativeLayout>
