@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "565484905984",
+    "project_id": "mauritius-disease-focus",
+    "storage_bucket": "mauritius-disease-focus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:565484905984:android:84f93180077ae10a679ae5",
+        "android_client_info": {
+          "package_name": "com.example.mauritiusdiseasefocus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "565484905984-6ma9h2s0eug3r6f2gm4l6uaq4pikrs7e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZLMnIaGHp0JeWrX0BfTZyvtnCBilugpc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "565484905984-6ma9h2s0eug3r6f2gm4l6uaq4pikrs7e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
