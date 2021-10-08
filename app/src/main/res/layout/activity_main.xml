@@ -7,6 +7,7 @@
     tools:context=".MainActivity"
     >
 
+
     <EditText
         android:id="@+id/edtTxtLoginID"
         android:layout_width="wrap_content"
@@ -87,13 +88,22 @@
      android:textSize="10dp"
      android:text="Chitra Singh Bhurtun Seegoolam 202006571" />
 
- <ImageView
-     android:id="@+id/LoginPageLogo"
-     android:layout_width="wrap_content"
-     android:layout_height="wrap_content"
-     android:layout_marginLeft="50dp"
-     android:layout_marginTop="20dp"
-     app:srcCompat="@drawable/im_logo_3" />
+    <ImageView
+        android:id="@+id/LoginBackgroundMtius"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha="0.3"
+        android:background="@drawable/im_backgroundmtius3"
+        android:layout_marginTop="250"
+        android:layout_marginLeft="60"
+        />
+    <ImageView
+        android:id="@+id/LoginPageLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/im_logo_3" />
 
 
 
