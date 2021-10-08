@@ -101,7 +101,7 @@
         android:id="@+id/LoginPageLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="50dp"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="20dp"
         app:srcCompat="@drawable/im_logo_3" />
 
