@@ -28,7 +28,7 @@
         android:layout_marginTop="20dp"
         android:drawableLeft="@drawable/ic_baseline_person_24"
         android:drawablePadding="5dp"
-        android:ems="10"
+        android:ems="15"
         android:hint="First Name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
@@ -43,7 +43,7 @@
         android:layout_marginTop="20dp"
         android:drawableLeft="@drawable/ic_baseline_person_24"
         android:drawablePadding="5dp"
-        android:ems="10"
+        android:ems="15"
         android:hint="last Name"
         android:inputType="textPersonName"
         android:minHeight="48dp"
@@ -65,7 +65,7 @@
         android:layout_marginLeft="30dp"
         android:drawableLeft="@drawable/ic_baseline_alternate_email_24"
         android:drawablePadding="10dp"
-        android:ems="10"
+        android:ems="15"
         android:hint="Email"
         android:inputType="textEmailAddress"
         android:minHeight="48dp" />
@@ -79,7 +79,7 @@
         android:layout_marginTop="20dp"
         android:drawableLeft="@drawable/ic_baseline_phone_iphone_24"
         android:drawablePadding="5dp"
-        android:ems="10"
+        android:ems="15"
         android:hint="Mobile Number"
         android:inputType="number|text|phone"
         android:minHeight="48dp" />
@@ -93,7 +93,7 @@
         android:layout_marginTop="20dp"
         android:drawableLeft="@drawable/ic_baseline_person_24"
         android:drawablePadding="5dp"
-        android:ems="10"
+        android:ems="15"
         android:hint="Create a user name"
         android:inputType="textPersonName"
         android:minHeight="48dp" />
@@ -107,9 +107,8 @@
         android:layout_marginTop="20dp"
         android:drawableLeft="@drawable/ic_baseline_security_24"
         android:drawablePadding="5dp"
-        android:ems="10"
+        android:ems="15"
         android:hint="Create a password"
-
         android:inputType="numberPassword"
         android:minHeight="48dp" />
 
@@ -122,7 +121,7 @@
         android:layout_marginTop="20dp"
         android:drawableLeft="@drawable/ic_baseline_security_24"
         android:drawablePadding="5dp"
-        android:ems="10"
+        android:ems="15"
         android:hint="Confirm password"
         android:inputType="numberPassword"
         android:minHeight="48dp" />
@@ -134,6 +133,7 @@
         android:layout_below="@+id/edtTextRegisterPasswordConfirmation"
         android:layout_marginLeft="150dp"
         android:layout_marginTop="20dp"
-        android:text="Sign me up!" />
+        android:text="Sign me up!"
+        android:backgroundTint="#4267B2"/>
 
 </RelativeLayout>
