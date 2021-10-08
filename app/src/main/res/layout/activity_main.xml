@@ -13,24 +13,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtTitle2"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="38dp"
         android:layout_marginTop="30dp"
         android:ems="15"
         android:hint="Login ID"
         android:inputType="textPersonName"
-        android:minHeight="48dp" />
+        android:drawableLeft="@drawable/ic_baseline_person_24"
+        android:drawablePadding="10dp"
+        android:minHeight="48dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/edtTextPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edtTxtLoginID"
-        android:layout_marginLeft="40dp"
+        android:layout_marginLeft="38dp"
         android:layout_marginTop="30dp"
         android:ems="15"
         android:hint="Password"
+        android:drawableLeft="@drawable/ic_baseline_security_24"
+        android:drawablePadding="10dp"
         android:inputType="textPassword"
-        android:minHeight="48dp" />
+        android:minHeight="48dp"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
 
     <TextView
         android:id="@+id/txtTitle2"
@@ -38,9 +46,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/LoginPageLogo"
         android:layout_marginTop="80dp"
-        android:layout_marginLeft="18dp"
+        android:layout_marginLeft="12dp"
         android:textSize="18dp"
-        android:text="Enter your Login ID and Password to proceed" />
+        android:text="Enter your Login ID and Password to proceed"
+        android:textStyle="bold"
+        android:textColor="@color/black"/>
 
     <Button
         android:id="@+id/btnLogin"
@@ -64,7 +74,7 @@
         android:backgroundTint="#4267B2"
      android:ems="15"
      android:text="I just want some basic info"/>
-    <!--for btnBasicInfo style="@style/Widget.AppCompat.Button.Small"-->
+
 
  <Button
      android:id="@+id/btnRegister"
@@ -92,7 +102,7 @@
         android:id="@+id/LoginBackgroundMtius"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:alpha="0.3"
+        android:alpha="0.2"
         android:background="@drawable/im_backgroundmtius3"
         android:layout_marginTop="250dp"
         android:layout_marginLeft="60dp"
