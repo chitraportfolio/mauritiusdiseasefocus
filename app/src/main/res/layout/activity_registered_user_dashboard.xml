@@ -21,32 +21,32 @@
                 android:id="@+id/imgRegisteredUserDashboardLogo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:srcCompat="@drawable/im_logo_3"
-                android:layout_marginLeft="50dp"/>
+                android:layout_marginLeft="50dp"
+                app:srcCompat="@drawable/im_logo_3" />
 
             <TextView
                 android:id="@+id/TxtHello"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Hello"
-                android:layout_marginTop="30dp"
+                android:layout_below="@+id/imgRegisteredUserDashboardLogo"
                 android:layout_marginLeft="15dp"
-                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:text="Hello"
                 android:textColor="@color/black"
                 android:textSize="30dp"
-                android:layout_below="@+id/imgRegisteredUserDashboardLogo"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/txtUserFirstName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textStyle="bold"
+                android:layout_below="@+id/imgRegisteredUserDashboardLogo"
+                android:layout_marginLeft="100dp"
+                android:layout_marginTop="-39dp"
+                android:hint="UserFirstName"
                 android:textColor="@color/black"
                 android:textSize="30dp"
-                android:hint="UserFirstName"
-                android:layout_marginTop="-39dp"
-                android:layout_marginLeft="100dp"
-                android:layout_below="@+id/imgRegisteredUserDashboardLogo"/>
+                android:textStyle="bold" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/CdViewLatestOutbreak"
@@ -62,8 +62,7 @@
                 app:cardElevation="10dp"
                 app:cardMaxElevation="12dp"
                 app:cardPreventCornerOverlap="true"
-                app:cardUseCompatPadding="true"
-                >
+                app:cardUseCompatPadding="true">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -71,13 +70,12 @@
                     android:layout_gravity="bottom|center_horizontal"
                     android:layout_marginTop="10dp"
                     android:layout_marginBottom="10dp"
-                    android:text="See latest outbreak in Mauritius"
-                    android:textSize="29dp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
                     android:drawableLeft="@drawable/ic_gummy_thermometer"
                     android:drawablePadding="5dp"
-                    />
+                    android:text="See latest outbreak in Mauritius"
+                    android:textColor="@color/black"
+                    android:textSize="29dp"
+                    android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>
 
