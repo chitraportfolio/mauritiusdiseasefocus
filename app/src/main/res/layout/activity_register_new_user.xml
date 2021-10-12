@@ -72,8 +72,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/edtTxtLastName"
-                android:layout_marginTop="30dp"
                 android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
                 android:drawableLeft="@drawable/ic_baseline_alternate_email_24"
                 android:drawablePadding="10dp"
                 android:ems="15"
@@ -144,9 +144,8 @@
                 android:layout_below="@+id/edtTextRegisterPasswordConfirmation"
                 android:layout_marginLeft="150dp"
                 android:layout_marginTop="20dp"
-                android:text="Sign me up!"
-                android:backgroundTint="#4267B2"/>
-
+                android:backgroundTint="#4267B2"
+                android:text="Sign me up!" />
 
 
         </LinearLayout>
