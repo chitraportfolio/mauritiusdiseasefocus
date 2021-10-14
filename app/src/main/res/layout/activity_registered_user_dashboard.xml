@@ -21,7 +21,7 @@
                 android:id="@+id/imgRegisteredUserDashboardLogo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
+                android:layout_marginLeft="40dp"
                 app:srcCompat="@drawable/im_logo_3" />
 
             <TextView
@@ -74,7 +74,7 @@
                     android:drawablePadding="5dp"
                     android:text="See latest outbreak in Mauritius"
                     android:textColor="@color/black"
-                    android:textSize="29dp"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>
@@ -84,10 +84,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/CdViewLatestOutbreak"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="5dp"
                 app:cardCornerRadius="15dp"
                 app:cardElevation="10dp"
                 app:cardMaxElevation="12dp"
@@ -99,13 +95,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center_horizontal"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginBottom="20dp"
                     android:drawableLeft="@drawable/ic_pixeltrue_icons_seo_growth"
-                    android:padding="5dp"
                     android:text="Spread Statistics Near You"
                     android:textColor="@color/black"
-                    android:textSize="28sp"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>
@@ -115,10 +108,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/CrdViewSpreadStatistics"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="15dp"
                 app:cardCornerRadius="15dp"
                 app:cardElevation="10dp"
                 app:cardMaxElevation="12dp"
@@ -129,25 +118,19 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center_horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
                     android:drawableLeft="@drawable/ic_gummy_mask"
                     android:text="Quick Precautionary Measures"
                     android:textColor="@color/black"
-                    android:textSize="26sp"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/CrdViewHealthCheck"
-                android:layout_width="381dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/CrdViewQuickPrecautionary"
-                android:layout_marginStart="15dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="15dp"
                 app:cardCornerRadius="15dp"
                 app:cardElevation="10dp"
                 app:cardMaxElevation="12dp"
@@ -158,12 +141,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center_horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
                     android:drawableLeft="@drawable/ic_pixeltrue_data_analyse_1"
                     android:text="My Health Check"
                     android:textColor="@color/black"
-                    android:textSize="28sp"
+                    android:textSize="22sp"
                     android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>
