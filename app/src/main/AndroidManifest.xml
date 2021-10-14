@@ -15,6 +15,9 @@
             android:name=".RegisteredUserDashboard"
             android:exported="true" />
         <activity
+            android:name=".RegisterNewUser"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
