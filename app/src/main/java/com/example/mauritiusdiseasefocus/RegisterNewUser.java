@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputEditText;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -27,26 +29,26 @@ public class RegisterNewUser extends AppCompatActivity {
     private Connection con = null;
 
     //declaring variables for textview and button
-    private TextView txtFirstName;
-    private TextView txtLastName;
-    private TextView txtEmail;
-    private TextView txtMobile;
-    private TextView txtUsername;
-    private TextView txtConfirmPassword;
-    private TextView txtPassword; //to check if password and confirm password matches
+    private TextInputEditText txtFirstName;
+    private TextInputEditText txtLastName;
+    private TextInputEditText txtEmail;
+    private TextInputEditText txtMobile;
+    private TextInputEditText txtUsername;
+    private TextInputEditText txtConfirmPassword;
+    private TextInputEditText txtPassword; //to check if password and confirm password matches
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_new_user);
 
-        txtFirstName = (TextView) findViewById(R.id.edtTxtFirstName);
-        txtLastName = (TextView) findViewById(R.id.edtTxtLastName);
-        txtEmail = (TextView) findViewById(R.id.edtTextEmail);
-        txtMobile = (TextView) findViewById(R.id.edtTextPhoneNumber);
-        txtUsername = (TextView) findViewById(R.id.edtTextUsername);
-        txtConfirmPassword = (TextView) findViewById(R.id.edtTextRegisterPasswordConfirmation);
-        txtPassword = (TextView) findViewById(R.id.edtTextPassword);
+        txtFirstName = (TextInputEditText) findViewById(R.id.edtTxtFirstName);
+        txtLastName = (TextInputEditText) findViewById(R.id.edtTxtLastName);
+        txtEmail = (TextInputEditText) findViewById(R.id.edtTextEmail);
+        txtMobile = (TextInputEditText) findViewById(R.id.edtTextPhoneNumber);
+        txtUsername = (TextInputEditText) findViewById(R.id.edtTextUsername);
+        txtConfirmPassword = (TextInputEditText) findViewById(R.id.edtTextRegisterPasswordConfirmation);
+        txtPassword = (TextInputEditText) findViewById(R.id.edtTextRegisterPassword);
 
         //setting strictmode
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
