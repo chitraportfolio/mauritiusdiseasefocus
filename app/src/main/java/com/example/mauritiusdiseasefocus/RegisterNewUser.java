@@ -68,7 +68,7 @@ public class RegisterNewUser extends AppCompatActivity {
         if (con != null) {
             Statement statement = null;
             //check if firstname is blank
-            if(txtFirstName==null){
+            if(txtFirstName.getText().toString() ==null){
                 txtFirstName.setError("Your first name is required!");
             }
             try {
