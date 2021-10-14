@@ -145,6 +145,7 @@
                     android:text="My Health Check"
                     android:textColor="@color/black"
                     android:textSize="22sp"
+                    android:padding="10dp"
                     android:textStyle="bold" />
 
             </androidx.cardview.widget.CardView>
