@@ -40,13 +40,13 @@ public class RegisterNewUser extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_new_user);
 
-        txtFirstName = findViewById(R.id.edtTxtFirstName);
-        txtLastName = findViewById(R.id.edtTxtLastName);
-        txtEmail = findViewById(R.id.edtTextEmail);
-        txtMobile = findViewById(R.id.edtTextPhoneNumber);
-        txtUsername = findViewById(R.id.edtTextUsername);
-        txtConfirmPassword = findViewById(R.id.edtTextRegisterPasswordConfirmation);
-        txtPassword = findViewById(R.id.edtTextPassword);
+        txtFirstName = (TextView) findViewById(R.id.edtTxtFirstName);
+        txtLastName = (TextView) findViewById(R.id.edtTxtLastName);
+        txtEmail = (TextView) findViewById(R.id.edtTextEmail);
+        txtMobile = (TextView) findViewById(R.id.edtTextPhoneNumber);
+        txtUsername = (TextView) findViewById(R.id.edtTextUsername);
+        txtConfirmPassword = (TextView) findViewById(R.id.edtTextRegisterPasswordConfirmation);
+        txtPassword = (TextView) findViewById(R.id.edtTextPassword);
 
         //setting strictmode
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -67,6 +67,10 @@ public class RegisterNewUser extends AppCompatActivity {
         //if connection is successful, proceed
         if (con != null) {
             Statement statement = null;
+            //check if firstname is blank
+            if(txtFirstName==null){
+                txtFirstName.setError("Your first name is required!");
+            }
             try {
                 //todo: Check if username does not already exist in database before inserting
                 //todo: check if first name, lastname, email address and phone number does not already exist in db before inserting
