@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -29,26 +30,26 @@ public class RegisterNewUser extends AppCompatActivity {
     private Connection con = null;
 
     //declaring variables for textview and button
-    private TextInputEditText txtFirstName;
-    private TextInputEditText txtLastName;
-    private TextInputEditText txtEmail;
-    private TextInputEditText txtMobile;
-    private TextInputEditText txtUsername;
-    private TextInputEditText txtConfirmPassword;
-    private TextInputEditText txtPassword; //to check if password and confirm password matches
+    private TextInputLayout txtFirstName;
+    private TextInputLayout txtLastName;
+    private TextInputLayout txtEmail;
+    private TextInputLayout txtMobile;
+    private TextInputLayout txtUsername;
+    private TextInputLayout txtConfirmPassword;
+    private TextInputLayout txtPassword; //to check if password and confirm password matches
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_new_user);
 
-        txtFirstName = (TextInputEditText) findViewById(R.id.edtTxtFirstName);
-        txtLastName = (TextInputEditText) findViewById(R.id.edtTxtLastName);
-        txtEmail = (TextInputEditText) findViewById(R.id.edtTextEmail);
-        txtMobile = (TextInputEditText) findViewById(R.id.edtTextPhoneNumber);
-        txtUsername = (TextInputEditText) findViewById(R.id.edtTextUsername);
-        txtConfirmPassword = (TextInputEditText) findViewById(R.id.edtTextRegisterPasswordConfirmation);
-        txtPassword = (TextInputEditText) findViewById(R.id.edtTextRegisterPassword);
+        txtFirstName = (TextInputLayout) findViewById(R.id.edtTxtFirstName);
+        txtLastName = (TextInputLayout) findViewById(R.id.edtTxtLastName);
+        txtEmail = (TextInputLayout) findViewById(R.id.edtTextEmail);
+        txtMobile = (TextInputLayout) findViewById(R.id.edtTextPhoneNumber);
+        txtUsername = (TextInputLayout) findViewById(R.id.edtTextUsername);
+        txtConfirmPassword = (TextInputLayout) findViewById(R.id.edtTextRegisterPasswordConfirmation);
+        txtPassword = (TextInputLayout) findViewById(R.id.edtTextRegisterPassword);
 
         //setting strictmode
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
@@ -70,7 +71,7 @@ public class RegisterNewUser extends AppCompatActivity {
         if (con != null) {
             Statement statement = null;
             //check if firstname is blank
-            if(txtFirstName.getText().toString() ==null){
+            if(txtFirstName.toString() ==null){
                 txtFirstName.setError("Your first name is required!");
             }
             try {
@@ -79,7 +80,7 @@ public class RegisterNewUser extends AppCompatActivity {
                 //todo: password complexity shoud be more than 7 figures
                 //todo: password and confirm password should match before saving
                 statement = con.createStatement();
-                String query = "exec dbo.MDF_InsertNewRegisteredUsers '" + txtFirstName.getText().toString() + "','" + txtLastName.getText().toString() + "','" + txtEmail.getText().toString() + "','" + txtMobile.getText().toString() + "','" + txtUsername.getText().toString() + "', '" + txtConfirmPassword.getText().toString() + "'";
+                String query = "exec dbo.MDF_InsertNewRegisteredUsers '" + txtFirstName.toString() + "','" + txtLastName.toString() + "','" + txtEmail.toString() + "','" + txtMobile.toString() + "','" + txtUsername.toString() + "', '" + txtConfirmPassword.toString() + "'";
                 ResultSet resultSet = statement.executeQuery(query);
                 Toast.makeText(RegisterNewUser.this, "Successfully Saved!", Toast.LENGTH_LONG).show();
             } catch (SQLException e) {
