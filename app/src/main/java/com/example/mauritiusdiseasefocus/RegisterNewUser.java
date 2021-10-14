@@ -64,13 +64,18 @@ public class RegisterNewUser extends AppCompatActivity {
     }
 
     public void RegisterNewUser(View view) {
+        //if connection is successful, proceed
         if (con != null) {
             Statement statement = null;
             try {
+                //todo: Check if username does not already exist in database before inserting
+                //todo: check if first name, lastname, email address and phone number does not already exist in db before inserting
+                //todo: password complexity shoud be more than 7 figures
+                //todo: password and confirm password should match before saving
                 statement = con.createStatement();
                 String query = "exec dbo.MDF_InsertNewRegisteredUsers '" + txtFirstName.getText().toString() + "','" + txtLastName.getText().toString() + "','" + txtEmail.getText().toString() + "','" + txtMobile.getText().toString() + "','" + txtUsername.getText().toString() + "', '" + txtConfirmPassword.getText().toString() + "'";
                 ResultSet resultSet = statement.executeQuery(query);
-                Toast.makeText(RegisterNewUser.this, "Successfully Saved!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RegisterNewUser.this, "Successfully Saved!", Toast.LENGTH_LONG).show();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
