@@ -145,6 +145,7 @@
                 android:layout_marginLeft="150dp"
                 android:layout_marginTop="20dp"
                 android:backgroundTint="#4267B2"
+                android:onClick="RegisterNewUser"
                 android:text="Sign me up!" />
 
 
