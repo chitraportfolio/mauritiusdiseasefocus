@@ -2,6 +2,7 @@ package com.example.mauritiusdiseasefocus;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -65,67 +66,8 @@ public class RegisterNewUser extends AppCompatActivity {
 
     }
 
-    public void CheckingIfTextFieldsAreEmpty(){
-        try {
-            //declaring strings to check for empty string and other conditions
-            String firstName = txtFirstName.getText().toString();
-            String lastName = txtLastName.getText().toString();
-            String email = txtEmail.getText().toString();
-            String mobile = txtMobile.getText().toString();
-            String username = txtUsername.getText().toString();
-            String password = txtPassword.getText().toString();
-            String confirmPassword = txtConfirmPassword.getText().toString();
-            if(TextUtils.isEmpty(firstName)) {
-                Toast.makeText(this, "You cannot omit your first name!", Toast.LENGTH_SHORT).show();
-                txtFirstName.setBackgroundColor(Color.RED);
-                return;
-            }else if(TextUtils.isEmpty(lastName)) {
-                Toast.makeText(this, "You cannot omit your last name!", Toast.LENGTH_SHORT).show();
-                txtLastName.setBackgroundColor(Color.RED);
-                return;
-            }else if(TextUtils.isEmpty(email)) {
-                Toast.makeText(this, "You must insert your email!", Toast.LENGTH_SHORT).show();
-                txtEmail.setBackgroundColor(Color.RED);
-                return;
-            }else if(TextUtils.isEmpty(mobile)) {
-                Toast.makeText(this, "You must insert your mobile number!", Toast.LENGTH_SHORT).show();
-                txtMobile.setBackgroundColor(Color.RED);
-                return;
-            }else if(TextUtils.isEmpty(username)) {
-                Toast.makeText(this, "You must insert a password!", Toast.LENGTH_SHORT).show();
-                txtUsername.setBackgroundColor(Color.RED);
-                return;
-            }else if(TextUtils.isEmpty(password)) {
-                Toast.makeText(this, "You must insert a password!", Toast.LENGTH_SHORT).show();
-                txtPassword.setBackgroundColor(Color.RED);
-                return;
-            }else if(TextUtils.isEmpty(confirmPassword)) {
-                Toast.makeText(this, "You must confirm your password!", Toast.LENGTH_SHORT).show();
-                txtConfirmPassword.setBackgroundColor(Color.RED);
-                return;
-            }else if(password != confirmPassword) {
-                Toast.makeText(this, "Your password does not match! Please try again", Toast.LENGTH_SHORT).show();
-                txtPassword.setBackgroundColor(Color.RED);
-                txtConfirmPassword.setBackgroundColor(Color.RED);
-                return;
-            }else{
-                txtFirstName.setBackgroundColor(Color.WHITE);
-                txtLastName.setBackgroundColor(Color.WHITE);
-                txtEmail.setBackgroundColor(Color.WHITE);
-                txtMobile.setBackgroundColor(Color.WHITE);
-                txtUsername.setBackgroundColor(Color.WHITE);
-                txtPassword.setBackgroundColor(Color.WHITE);
-                txtConfirmPassword.setBackgroundColor(Color.WHITE);
-            }
-        }catch (Exception e){
-            e.getStackTrace();
-        }
-
-    }
 
     public void RegisterNewUser(View view) {
-        //Calling method to check if textfields are empty
-       // CheckingIfTextFieldsAreEmpty();
             //declaring strings to check for empty string and other conditions
             String firstName = txtFirstName.getText().toString();
             String lastName = txtLastName.getText().toString();
@@ -151,7 +93,7 @@ public class RegisterNewUser extends AppCompatActivity {
                 txtMobile.setBackgroundColor(Color.RED);
                 return;
             }else if(TextUtils.isEmpty(username)) {
-                Toast.makeText(this, "You must insert a password!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "You must insert a username!", Toast.LENGTH_SHORT).show();
                 txtUsername.setBackgroundColor(Color.RED);
                 return;
             }else if(TextUtils.isEmpty(password)) {
@@ -162,7 +104,7 @@ public class RegisterNewUser extends AppCompatActivity {
                 Toast.makeText(this, "You must confirm your password!", Toast.LENGTH_SHORT).show();
                 txtConfirmPassword.setBackgroundColor(Color.RED);
                 return;
-            }else if(password != confirmPassword) {
+            }else if(!password.toString().equals(confirmPassword)) {
                 Toast.makeText(this, "Your password does not match! Please try again", Toast.LENGTH_SHORT).show();
                 txtPassword.setBackgroundColor(Color.RED);
                 txtConfirmPassword.setBackgroundColor(Color.RED);
@@ -182,20 +124,23 @@ public class RegisterNewUser extends AppCompatActivity {
                         //todo: Check if username does not already exist in database before inserting
                         //todo: check if first name, lastname, email address and phone number does not already exist in db before inserting
                         //todo: password complexity should be more than 7 figures
-                        //todo: password and confirm password should match before saving
                         statement = con.createStatement();
                         String query = "exec dbo.MDF_InsertNewRegisteredUsers '" + txtFirstName.getText().toString() + "','" + txtLastName.getText().toString() + "','" + txtEmail.getText().toString() + "','" + txtMobile.getText().toString() + "','" + txtUsername.getText().toString() + "', '" + txtConfirmPassword.getText().toString() + "'";
                         ResultSet resultSet = statement.executeQuery(query);
-                        Toast.makeText(RegisterNewUser.this, "Successfully Saved!", Toast.LENGTH_LONG).show();
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
-
+                    Toast.makeText(RegisterNewUser.this, "Successfully Saved!", Toast.LENGTH_LONG).show();
+                    OpenLogin();
                 } else {
                     Toast.makeText(RegisterNewUser.this, "Error in connecting", Toast.LENGTH_SHORT).show();
                 }
             }
+    }
 
-
+    //method for opening login activity
+    private void OpenLogin() {
+        Intent intent  = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
