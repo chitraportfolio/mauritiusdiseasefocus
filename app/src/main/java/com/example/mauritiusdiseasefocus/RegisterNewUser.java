@@ -126,7 +126,6 @@ public class RegisterNewUser extends AppCompatActivity {
     public void RegisterNewUser(View view) {
         //Calling method to check if textfields are empty
        // CheckingIfTextFieldsAreEmpty();
-        try {
             //declaring strings to check for empty string and other conditions
             String firstName = txtFirstName.getText().toString();
             String lastName = txtLastName.getText().toString();
@@ -176,29 +175,27 @@ public class RegisterNewUser extends AppCompatActivity {
                 txtUsername.setBackgroundColor(Color.WHITE);
                 txtPassword.setBackgroundColor(Color.WHITE);
                 txtConfirmPassword.setBackgroundColor(Color.WHITE);
-            }
-        }catch (Exception e){
-            e.getStackTrace();
-        }
-          //if connection is successful, proceed
-        if (con != null) {
-            Statement statement = null;
-            try {
-                //todo: Check if username does not already exist in database before inserting
-                //todo: check if first name, lastname, email address and phone number does not already exist in db before inserting
-                //todo: password complexity should be more than 7 figures
-                //todo: password and confirm password should match before saving
-                statement = con.createStatement();
-                String query = "exec dbo.MDF_InsertNewRegisteredUsers '" + txtFirstName.getText().toString() + "','" + txtLastName.getText().toString() + "','" + txtEmail.getText().toString() + "','" + txtMobile.getText().toString() + "','" + txtUsername.getText().toString() + "', '" + txtConfirmPassword.getText().toString() + "'";
-                ResultSet resultSet = statement.executeQuery(query);
-                Toast.makeText(RegisterNewUser.this, "Successfully Saved!", Toast.LENGTH_LONG).show();
-            } catch (SQLException e) {
-                e.printStackTrace();
+                //if connection is successful, proceed
+                if (con != null) {
+                    Statement statement = null;
+                    try {
+                        //todo: Check if username does not already exist in database before inserting
+                        //todo: check if first name, lastname, email address and phone number does not already exist in db before inserting
+                        //todo: password complexity should be more than 7 figures
+                        //todo: password and confirm password should match before saving
+                        statement = con.createStatement();
+                        String query = "exec dbo.MDF_InsertNewRegisteredUsers '" + txtFirstName.getText().toString() + "','" + txtLastName.getText().toString() + "','" + txtEmail.getText().toString() + "','" + txtMobile.getText().toString() + "','" + txtUsername.getText().toString() + "', '" + txtConfirmPassword.getText().toString() + "'";
+                        ResultSet resultSet = statement.executeQuery(query);
+                        Toast.makeText(RegisterNewUser.this, "Successfully Saved!", Toast.LENGTH_LONG).show();
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+
+                } else {
+                    Toast.makeText(RegisterNewUser.this, "Error in connecting", Toast.LENGTH_SHORT).show();
+                }
             }
 
-        } else {
-            Toast.makeText(RegisterNewUser.this, "Error in connecting", Toast.LENGTH_SHORT).show();
-        }
 
     }
 }
