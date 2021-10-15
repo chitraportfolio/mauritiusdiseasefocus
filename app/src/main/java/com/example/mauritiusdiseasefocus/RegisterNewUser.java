@@ -65,7 +65,7 @@ public class RegisterNewUser extends AppCompatActivity {
 
     }
 
-    public void RegisterNewUser(View view) {
+    public void CheckingIfTextFieldsAreEmpty(){
         //declaring strings to check for empty string and other conditions
         String firstName = txtFirstName.getText().toString();
         String lastName = txtLastName.getText().toString();
@@ -106,7 +106,13 @@ public class RegisterNewUser extends AppCompatActivity {
             Toast.makeText(this, "Your password does not match! Please try again", Toast.LENGTH_SHORT).show();
             txtFirstName.setBackgroundColor(Color.RED);
             return;
-        }  //if connection is successful, proceed
+        }
+    }
+
+    public void RegisterNewUser(View view) {
+        //Calling method to check if textfields are empty
+        CheckingIfTextFieldsAreEmpty();
+          //if connection is successful, proceed
         if (con != null) {
             Statement statement = null;
             try {
