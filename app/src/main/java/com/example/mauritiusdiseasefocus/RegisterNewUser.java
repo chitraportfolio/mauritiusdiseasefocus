@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -64,6 +65,11 @@ public class RegisterNewUser extends AppCompatActivity {
     }
 
     public void RegisterNewUser(View view) {
+        String firstName = txtFirstName.getText().toString();
+        if(TextUtils.isEmpty(firstName)) {
+            Toast.makeText(this, "plz enter your name ", Toast.LENGTH_SHORT).show();
+            return;
+        }
         //if connection is successful, proceed
         if (con != null) {
             Statement statement = null;
