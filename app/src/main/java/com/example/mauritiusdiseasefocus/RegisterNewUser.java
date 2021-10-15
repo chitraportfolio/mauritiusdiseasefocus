@@ -80,32 +80,41 @@ public class RegisterNewUser extends AppCompatActivity {
             return;
         }else if(TextUtils.isEmpty(lastName)) {
             Toast.makeText(this, "You cannot omit your last name!", Toast.LENGTH_SHORT).show();
-            txtFirstName.setBackgroundColor(Color.RED);
+            txtLastName.setBackgroundColor(Color.RED);
             return;
         }else if(TextUtils.isEmpty(email)) {
             Toast.makeText(this, "You must insert your email!", Toast.LENGTH_SHORT).show();
-            txtFirstName.setBackgroundColor(Color.RED);
+            txtEmail.setBackgroundColor(Color.RED);
             return;
         }else if(TextUtils.isEmpty(mobile)) {
             Toast.makeText(this, "You must insert your mobile number!", Toast.LENGTH_SHORT).show();
-            txtFirstName.setBackgroundColor(Color.RED);
+            txtMobile.setBackgroundColor(Color.RED);
             return;
         }else if(TextUtils.isEmpty(username)) {
             Toast.makeText(this, "You must insert a password!", Toast.LENGTH_SHORT).show();
-            txtFirstName.setBackgroundColor(Color.RED);
+            txtUsername.setBackgroundColor(Color.RED);
             return;
         }else if(TextUtils.isEmpty(password)) {
             Toast.makeText(this, "You must insert a password!", Toast.LENGTH_SHORT).show();
-            txtFirstName.setBackgroundColor(Color.RED);
+            txtPassword.setBackgroundColor(Color.RED);
             return;
         }else if(TextUtils.isEmpty(confirmPassword)) {
             Toast.makeText(this, "You must confirm your password!", Toast.LENGTH_SHORT).show();
-            txtFirstName.setBackgroundColor(Color.RED);
+            txtConfirmPassword.setBackgroundColor(Color.RED);
             return;
         }else if(password != confirmPassword) {
             Toast.makeText(this, "Your password does not match! Please try again", Toast.LENGTH_SHORT).show();
-            txtFirstName.setBackgroundColor(Color.RED);
+            txtPassword.setBackgroundColor(Color.RED);
+            txtConfirmPassword.setBackgroundColor(Color.RED);
             return;
+        }else{
+            txtFirstName.setBackgroundColor(Color.WHITE);
+            txtLastName.setBackgroundColor(Color.WHITE);
+            txtEmail.setBackgroundColor(Color.WHITE);
+            txtMobile.setBackgroundColor(Color.WHITE);
+            txtUsername.setBackgroundColor(Color.WHITE);
+            txtPassword.setBackgroundColor(Color.WHITE);
+            txtConfirmPassword.setBackgroundColor(Color.WHITE);
         }
     }
 
