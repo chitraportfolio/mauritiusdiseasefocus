@@ -135,7 +135,8 @@
                 android:ems="15"
                 android:hint="Confirm password"
                 android:inputType="numberPassword"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                />
 
             <Button
                 android:id="@+id/btnSignUp"
@@ -145,6 +146,7 @@
                 android:layout_marginLeft="150dp"
                 android:layout_marginTop="20dp"
                 android:backgroundTint="#4267B2"
+                android:onClick="RegisterNewUser"
                 android:text="Sign me up!" />
 
 
