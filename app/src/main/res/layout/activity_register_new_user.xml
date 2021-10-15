@@ -135,7 +135,8 @@
                 android:ems="15"
                 android:hint="Confirm password"
                 android:inputType="numberPassword"
-                android:minHeight="48dp" />
+                android:minHeight="48dp"
+                />
 
             <Button
                 android:id="@+id/btnSignUp"
