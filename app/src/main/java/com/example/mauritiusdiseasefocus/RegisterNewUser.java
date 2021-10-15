@@ -48,7 +48,7 @@ public class RegisterNewUser extends AppCompatActivity {
         txtMobile = findViewById(R.id.edtTextPhoneNumber);
         txtUsername = findViewById(R.id.edtTextUsername);
         txtConfirmPassword = findViewById(R.id.edtTextRegisterPasswordConfirmation);
-        txtPassword = findViewById(R.id.edtTextPassword);
+        txtPassword = findViewById(R.id.edtTextRegisterPassword);
 
         //setting strictmode
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
