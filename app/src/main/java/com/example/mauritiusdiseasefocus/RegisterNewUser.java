@@ -125,7 +125,61 @@ public class RegisterNewUser extends AppCompatActivity {
 
     public void RegisterNewUser(View view) {
         //Calling method to check if textfields are empty
-        CheckingIfTextFieldsAreEmpty();
+       // CheckingIfTextFieldsAreEmpty();
+        try {
+            //declaring strings to check for empty string and other conditions
+            String firstName = txtFirstName.getText().toString();
+            String lastName = txtLastName.getText().toString();
+            String email = txtEmail.getText().toString();
+            String mobile = txtMobile.getText().toString();
+            String username = txtUsername.getText().toString();
+            String password = txtPassword.getText().toString();
+            String confirmPassword = txtConfirmPassword.getText().toString();
+            if(TextUtils.isEmpty(firstName)) {
+                Toast.makeText(this, "You cannot omit your first name!", Toast.LENGTH_SHORT).show();
+                txtFirstName.setBackgroundColor(Color.RED);
+                return;
+            }else if(TextUtils.isEmpty(lastName)) {
+                Toast.makeText(this, "You cannot omit your last name!", Toast.LENGTH_SHORT).show();
+                txtLastName.setBackgroundColor(Color.RED);
+                return;
+            }else if(TextUtils.isEmpty(email)) {
+                Toast.makeText(this, "You must insert your email!", Toast.LENGTH_SHORT).show();
+                txtEmail.setBackgroundColor(Color.RED);
+                return;
+            }else if(TextUtils.isEmpty(mobile)) {
+                Toast.makeText(this, "You must insert your mobile number!", Toast.LENGTH_SHORT).show();
+                txtMobile.setBackgroundColor(Color.RED);
+                return;
+            }else if(TextUtils.isEmpty(username)) {
+                Toast.makeText(this, "You must insert a password!", Toast.LENGTH_SHORT).show();
+                txtUsername.setBackgroundColor(Color.RED);
+                return;
+            }else if(TextUtils.isEmpty(password)) {
+                Toast.makeText(this, "You must insert a password!", Toast.LENGTH_SHORT).show();
+                txtPassword.setBackgroundColor(Color.RED);
+                return;
+            }else if(TextUtils.isEmpty(confirmPassword)) {
+                Toast.makeText(this, "You must confirm your password!", Toast.LENGTH_SHORT).show();
+                txtConfirmPassword.setBackgroundColor(Color.RED);
+                return;
+            }else if(password != confirmPassword) {
+                Toast.makeText(this, "Your password does not match! Please try again", Toast.LENGTH_SHORT).show();
+                txtPassword.setBackgroundColor(Color.RED);
+                txtConfirmPassword.setBackgroundColor(Color.RED);
+                return;
+            }else{
+                txtFirstName.setBackgroundColor(Color.WHITE);
+                txtLastName.setBackgroundColor(Color.WHITE);
+                txtEmail.setBackgroundColor(Color.WHITE);
+                txtMobile.setBackgroundColor(Color.WHITE);
+                txtUsername.setBackgroundColor(Color.WHITE);
+                txtPassword.setBackgroundColor(Color.WHITE);
+                txtConfirmPassword.setBackgroundColor(Color.WHITE);
+            }
+        }catch (Exception e){
+            e.getStackTrace();
+        }
           //if connection is successful, proceed
         if (con != null) {
             Statement statement = null;
