@@ -61,7 +61,6 @@ public class RegisterNewUser extends AppCompatActivity {
         txtFirstName = findViewById(R.id.edtTxtFirstName);
         txtLastName = findViewById(R.id.edtTxtLastName);
         txtEmail = findViewById(R.id.edtTextEmail);
-        txtMobile = findViewById(R.id.edtTextPhoneNumber);
         txtUsername = findViewById(R.id.edtTextUsername);
         txtConfirmPassword = findViewById(R.id.edtTextRegisterPasswordConfirmation);
         txtPassword = findViewById(R.id.edtTextRegisterPassword);
@@ -88,7 +87,6 @@ public class RegisterNewUser extends AppCompatActivity {
             String firstName = txtFirstName.getText().toString();
             String lastName = txtLastName.getText().toString();
             String email = txtEmail.getText().toString();
-            String mobile = txtMobile.getText().toString();
             String username = txtUsername.getText().toString();
             String password = txtPassword.getText().toString();
             String confirmPassword = txtConfirmPassword.getText().toString();
@@ -103,10 +101,6 @@ public class RegisterNewUser extends AppCompatActivity {
             }else if(TextUtils.isEmpty(email)) {
                 Toast.makeText(this, "You must insert your email!", Toast.LENGTH_SHORT).show();
                 txtEmail.setBackgroundColor(Color.RED);
-                return;
-            }else if(TextUtils.isEmpty(mobile)) {
-                Toast.makeText(this, "You must insert your mobile number!", Toast.LENGTH_SHORT).show();
-                txtMobile.setBackgroundColor(Color.RED);
                 return;
             }else if(TextUtils.isEmpty(username)) {
                 Toast.makeText(this, "You must insert a username!", Toast.LENGTH_SHORT).show();
@@ -129,7 +123,6 @@ public class RegisterNewUser extends AppCompatActivity {
                 txtFirstName.setBackgroundColor(Color.WHITE);
                 txtLastName.setBackgroundColor(Color.WHITE);
                 txtEmail.setBackgroundColor(Color.WHITE);
-                txtMobile.setBackgroundColor(Color.WHITE);
                 txtUsername.setBackgroundColor(Color.WHITE);
                 txtPassword.setBackgroundColor(Color.WHITE);
                 txtConfirmPassword.setBackgroundColor(Color.WHITE);
@@ -141,21 +134,12 @@ public class RegisterNewUser extends AppCompatActivity {
                         //todo: check if first name, lastname, email address and phone number does not already exist in db before inserting
                         //todo: password complexity should be more than 7 figures
                         statement = con.createStatement();
-                        String query = "exec dbo.MDF_InsertNewRegisteredUsers '" + txtFirstName.getText().toString() + "','" + txtLastName.getText().toString() + "','" + txtEmail.getText().toString() + "','" + txtMobile.getText().toString() + "','" + txtUsername.getText().toString() + "', '" + txtConfirmPassword.getText().toString() + "'";
+                        String query = "exec dbo.MDF_InsertNewRegisteredUsers '" + txtFirstName.getText().toString() + "','" + txtLastName.getText().toString() + "','" + txtEmail.getText().toString() + "','"  + txtUsername.getText().toString() + "', '" + txtConfirmPassword.getText().toString() + "'";
                         ResultSet resultSet = statement.executeQuery(query);
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
                     SendEmail();
-                    //Need to test if working when app is installed in the phone.
-                   // if (ContextCompat.checkSelfPermission(RegisterNewUser.this, Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED){
-                      //  SendSMS();
-                  //  }else{
-                        //Request permission for sending sms
-                    //    ActivityCompat.requestPermissions(RegisterNewUser.this, new String[]{Manifest.permission.SEND_SMS}, 100);
-
-                 //   }
-
                     Toast.makeText(RegisterNewUser.this, "Successfully Saved! Please check your email!", Toast.LENGTH_LONG).show();
                     OpenLogin();
                 } else {
@@ -177,13 +161,4 @@ public class RegisterNewUser extends AppCompatActivity {
         javaMailAPI.execute();
     }
 
-    //method for sending textmessage
-    public void SendSMS(){
-        String countryCode = "+230";
-        String number = countryCode + txtMobile.getText().toString().trim();
-
-        SmsManager mySmsManager = SmsManager.getDefault();
-        mySmsManager.sendTextMessage(number,null, sms, null, null);
-        Toast.makeText(RegisterNewUser.this, "Text message sent!", Toast.LENGTH_SHORT).show();
-    }
 }
