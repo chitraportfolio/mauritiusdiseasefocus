@@ -1,21 +1,28 @@
 package com.example.mauritiusdiseasefocus;
 
-import androidx.appcompat.app.AppCompatActivity;
-
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.telephony.SmsManager;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+
 
 public class RegisterNewUser extends AppCompatActivity {
 
@@ -38,6 +45,14 @@ public class RegisterNewUser extends AppCompatActivity {
     private TextView txtConfirmPassword;
     private TextView txtPassword; //to check if password and confirm password matches
 
+    //declaring variables for sending email
+    public String subject = "Notifications from Mauritius Disease Focus";
+    public String message = "Hello, " + "Thank you for registering with Mauritius Disease Focus App." + "\n" + "You can now see the latest disease outbreak in Mauritius, monitor your health and chat with our bot." + "\n" + "Login to Mauritius Disease Focus to find more.";
+
+    //declaring variables for sending text messages
+    public String sms = "Thank you for registering with Mauritius Disease Focus App." + "\n" + "You can now see the latest disease outbreak in Mauritius, monitor your health and chat with our bot." + "\n" + "Login to Mauritius Disease Focus to find more.";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,6 +69,7 @@ public class RegisterNewUser extends AppCompatActivity {
         //setting strictmode
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
+
 
         try {
             Class.forName(classes);
@@ -130,7 +146,17 @@ public class RegisterNewUser extends AppCompatActivity {
                     } catch (SQLException e) {
                         e.printStackTrace();
                     }
-                    Toast.makeText(RegisterNewUser.this, "Successfully Saved!", Toast.LENGTH_LONG).show();
+                    SendEmail();
+                    //Need to test if working when app is installed in the phone.
+                   // if (ContextCompat.checkSelfPermission(RegisterNewUser.this, Manifest.permission.SEND_SMS) == PackageManager.PERMISSION_GRANTED){
+                      //  SendSMS();
+                  //  }else{
+                        //Request permission for sending sms
+                    //    ActivityCompat.requestPermissions(RegisterNewUser.this, new String[]{Manifest.permission.SEND_SMS}, 100);
+
+                 //   }
+
+                    Toast.makeText(RegisterNewUser.this, "Successfully Saved! Please check your email!", Toast.LENGTH_LONG).show();
                     OpenLogin();
                 } else {
                     Toast.makeText(RegisterNewUser.this, "Error in connecting", Toast.LENGTH_SHORT).show();
@@ -142,5 +168,22 @@ public class RegisterNewUser extends AppCompatActivity {
     private void OpenLogin() {
         Intent intent  = new Intent(this, MainActivity.class);
         startActivity(intent);
+    }
+
+    //method for sending email
+    public void SendEmail(){
+        String email = txtEmail.getText().toString().trim();
+        JavaMailAPI javaMailAPI =  new JavaMailAPI(this, email, subject, message);
+        javaMailAPI.execute();
+    }
+
+    //method for sending textmessage
+    public void SendSMS(){
+        String countryCode = "+230";
+        String number = countryCode + txtMobile.getText().toString().trim();
+
+        SmsManager mySmsManager = SmsManager.getDefault();
+        mySmsManager.sendTextMessage(number,null, sms, null, null);
+        Toast.makeText(RegisterNewUser.this, "Text message sent!", Toast.LENGTH_SHORT).show();
     }
 }
