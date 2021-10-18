@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Mauritius Disease Focus</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Paste BOTH strings as required -->
+    <string name="back4app_app_id">ffK1A8AZyr7sUHz0PiTdmISSpKJs6GXXOfmcY5ZI</string>
+    <string name="back4app_client_key">aEdRWiW96g7KwxpjMnu863zAh4nTdEEB6U3MYwuL</string>
 </resources>
