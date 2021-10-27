@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mauritiusdiseasefocus">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
 
     <application
         android:allowBackup="true"
@@ -12,6 +12,33 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MauritiusDiseaseFocus">
+        <activity
+            android:name=".Guest_OtherDiseaseOutbreaks"
+            android:exported="false" />
+        <activity
+            android:name=".Guest_DailyRestrictions"
+            android:exported="false" />
+        <activity
+            android:name=".Guest_LatestCovid19Cases"
+            android:exported="false" />
+        <activity
+            android:name=".MyHealthCheck"
+            android:exported="false" />
+        <activity
+            android:name=".QuickPrecautionaryMeasures"
+            android:exported="false" />
+        <activity
+            android:name=".SpreadStatistics"
+            android:exported="false" />
+        <activity
+            android:name=".LatestOutbreak"
+            android:exported="false" />
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
+        <activity
+            android:name=".GuestDashboard"
+            android:exported="false" />
         <activity
             android:name=".RegisteredUserDashboard"
             android:exported="true" />

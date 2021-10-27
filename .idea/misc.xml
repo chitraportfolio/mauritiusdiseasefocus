@@ -3,9 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Chitra/AndroidStudioProjects/MauritiusDiseaseFocus/app/src/main/res/layout/activity_forgot_password.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Chitra/AndroidStudioProjects/MauritiusDiseaseFocus/app/src/main/res/layout/activity_guest_daily_restrictions.xml" value="0.24010416666666667" />
+        <entry key="..\:/Users/Chitra/AndroidStudioProjects/MauritiusDiseaseFocus/app/src/main/res/layout/activity_guest_dashboard.xml" value="0.264" />
+        <entry key="..\:/Users/Chitra/AndroidStudioProjects/MauritiusDiseaseFocus/app/src/main/res/layout/activity_guest_other_disease_outbreaks.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Chitra/AndroidStudioProjects/MauritiusDiseaseFocus/app/src/main/res/layout/activity_gutest_latest_covid19_cases.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Chitra/AndroidStudioProjects/MauritiusDiseaseFocus/app/src/main/res/layout/activity_latest_outbreak.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Chitra/AndroidStudioProjects/MauritiusDiseaseFocus/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Users/Chitra/AndroidStudioProjects/MauritiusDiseaseFocus/app/src/main/res/layout/activity_my_health_check.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Chitra/AndroidStudioProjects/MauritiusDiseaseFocus/app/src/main/res/layout/activity_quick_precautionary_measures.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Chitra/AndroidStudioProjects/MauritiusDiseaseFocus/app/src/main/res/layout/activity_register_new_user.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Chitra/AndroidStudioProjects/MauritiusDiseaseFocus/app/src/main/res/layout/activity_registered_user_dashboard.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Chitra/AndroidStudioProjects/MauritiusDiseaseFocus/app/src/main/res/layout/activity_spread_statistics.xml" value="0.25416666666666665" />
       </map>
     </option>
   </component>
